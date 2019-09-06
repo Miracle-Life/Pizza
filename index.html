@@ -1,0 +1,282 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="./img/pizza.ico" type="image/ico">
+
+
+    <title>Pizza</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chechbox.css">
+    <link rel="stylesheet" href="stars.css">
+
+
+
+
+
+</head >
+
+
+
+<body data-spy="scroll" data-target="header" data-offset="50" id="sect1" >
+<!--<header class="container-fluid  header_top  fixed-top">-->
+<header class="container-fluid  fixed-top">
+    <div class="container container_top ">
+        <div class="row justify-content-between">
+            <div class="header_top_logo col-3 ">
+                <a href="index.html" ><img class="img_logo" src="img/pizza2.png" alt="Pizza"></a>
+            </div>
+            <div class="header_top_nav col-6">
+                <ul class="nav nav-pills nav-fill  ">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="order_pizza.html">Заказ Пиццы</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="o-nas.html">О нас</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">Контакты</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!--<div id='stars'></div>-->
+<!--<div id='stars2'></div>-->
+<!--<div id='stars3'></div>-->
+<section>
+    <div class="image_wrapper row">
+        <img class="img_wrapper" src="./img/home_pizza2_intro.jpg" alt="intro">
+
+    </div>
+</section>
+
+<section class="menu container-fluid" id="section1">
+    <div class="section-decoration top" style="background-image:url(./img/home_pizza2_decoration2.png);height:6px;width: 100%"></div>
+    <div class="row menu_top">
+        <div class="col-lg-3 form_left ">
+            <form>
+                <label>
+                    <input type="text" class="text-1"  id='name' placeholder="Ваше Имя" required title="Name" pattern="[A-Za-zА-Яа-яЁё]+" >
+                </label>
+                <label>
+                    <input type="tel"  id='mobile' placeholder="Телефон" required title="contact telephone +38(063)446-46-20" pattern="\+38\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}">
+                </label>
+                <label>
+                    <input type="text"  id='street' class="text-2" placeholder="Адрес доставки" required title="Order address" pattern="[A-Za-zА-Яа-яЁё0-9,.\-\s]+" >
+                </label>
+                <div class="sum">Сума: <span id="result"> 0.00</span></div>
+                <!--          onclick="test_checkbox()"-->
+                <button type="submit" id="btn" class="btn btn-light"> Заказать </button>
+            </form>
+        </div>
+        <div class="col-lg-4 form_center">
+            <img src="img/main-pizza.png"  id='im' class="img1" alt="pizza">
+            <div class="container-center-text "  id="pizza"><h3>Выберите размер:</h3> <br>
+                <div class=" cntr"  >
+                    <label class="radio" >
+                        <input type="radio"  name="size" id="size1" class="piz hidden" onclick="kod1()" value="100">
+                        <span class="label"><br><br>25см</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio"  name="size" id="size2" class="piz hidden" onclick="kod2()"  value="120">
+                        <span class="label"><br><br>35см</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio"  name='size' id="size3" class="piz hidden" onclick="kod3()" value="160">
+                        <span class="label" > <br><br> 45см</span>
+                    </label><br><br>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4  form_right">
+                    <div class="container-right-text">
+                            <div class="flags col">
+                                        <h3> Выберите тип коржа:</h3>
+                                        <label class="radio">
+                                            <input type="radio" name="dough" class="piz hidden"  id="d14"   value="9">
+                                            <span class="radio_circle"></span>
+                                            <span >Тесто"С бортиком"</span>
+                                        </label><br>
+                                        <label class="radio">
+                                            <input type="radio" name="dough" class="piz hidden" id="d15"   value="6">
+                                            <span class="label"></span>
+                                            <span>Тесто"Тонкое"</span>
+                                        </label><br>
+                                        <label class="radio">
+                                            <input type="radio" name="dough" id="d16"  class="piz hidden"  value="7">
+                                            <span class="label"> </span><span>Тесто"Хот-дог"</span>
+                                        </label><br>
+                                        <label class="radio">
+                                            <input type="radio" name="dough" id="d17" class="piz hidden"    value="7">
+                                            <span class="label"></span><span>Тесто"Сырный бортик"</span>
+                                        </label><br>
+                                        <label class="radio">
+                                            <input type="radio" name="dough" id="d18" class="piz hidden"    value="8">
+                                            <span class="label"> </span><span>Тесто"Кунжутный бортик</span>
+                                        </label>"<br>
+                            </div>
+                             <div class=" col flags">
+                                    <h3>Выберите дополнительные начинки:</h3>
+                                    <div class=" flags">
+                                        <input type="checkbox" id="cbx" name="ingredients"  class="piz" value="14" style="display: none;">
+                                        <label for="cbx" class="check">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                            <span>Ветчина 45г/14 грн</span>
+                                        </label>
+                                        <input type="checkbox" id="cbx2" name="ingredients"  class="piz" value="15" style="display: none;">
+                                        <label for="cbx2" class="check2">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                            <span>Бекон 45г/15 грн</span>
+                                        </label>
+                                        <input type="checkbox" id="cbx3" name="ingredients"  class="piz" value="11" style="display: none;">
+                                        <label for="cbx3" class="check3">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                            <span>Колбаски 45г/11 грн</span>
+                                        </label>
+                                        <input type="checkbox" id="cbx4" name="ingredients"  class="piz" value="29" style="display: none;">
+                                        <label for="cbx4" class="check4">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                            <span>Говядина 50г/29 грн</span>
+                                        </label>
+                                        <input type="checkbox" id="cbx5" name="ingredients"  class="piz" value="9" style="display: none;">
+                                        <label for="cbx5" class="check5">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                            <span> Ананас 30г/9 грн</span>
+                                        </label>
+
+                                        <input type="checkbox" id="cbx6" name="ingredients"  class="piz" value="11" style="display: none;">
+                                        <label for="cbx6" class="check6">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                            <span>Помидор 70г/11 грн</span>
+                                        </label>
+
+                                        <input type="checkbox" id="cbx8" name="ingredients"  class="piz" value="13" style="display: none;">
+                                        <label for="cbx8" class="check8">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                            <span>Опята 40г/13 грн</span>
+                                        </label>
+                                        <input type="checkbox" id="cbx9" name="ingredients"  class="piz" value="10" style="display: none;">
+                                        <label for="cbx9" class="check9">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                            <span> Шпинат 15г/10 грн</span>
+                                        </label>
+                                        <input type="checkbox" id="cbx7" name="ingredients"  class="piz" value="12" style="display: none;">
+                                        <label for="cbx7" class="check7">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                            <span>Шампиньоны 40г/12 грн</span>
+                                        </label>
+                                        <input type="checkbox" id="cbx10" name="ingredients"  class="piz" value="10" style="display: none;">
+                                        <label for="cbx10" class="check10">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                            <span>Барбекью 30г/10 грн</span>
+                                        </label>
+                                    </div>
+                                </div>
+                    </div>
+            </div>
+    </div>
+    <div class="row menu_bot">
+
+    </div>
+
+</section>
+
+
+<footer id="section2">
+
+    <div class="section-decoration" style="background-image:url(./img/home_pizza2_decoration1.png);height:6px;width: 100%"></div>
+    <div class="container-fluid justify-content-center logo-soc bottom">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 justify-content-center">
+                <div class="image_frame">
+                    <div class="image_wrapper aligncenter">
+                        <img class="scale-with-grid" src="./img/home_pizza2_footer_logo.png" alt="home_pizza2_footer_logo" width="92" height="133">
+                    </div>
+                </div>
+                <div class="col soc">
+                    <div style="text-align: center; margin: 40px 5% 0;">
+                        <p class="icon-act" style="font-size: 25px; line-height: 25px;">
+                            <a href="#"><i class="icon-facebook"></i></a>
+                            <a href="#"><i class="icon-gplus"></i></a>
+                            <a href="#"><i class="icon-twitter"></i></a>
+                            <a href="#"><i class="icon-play"></i></a></p>
+                        <hr class="no_line" style="margin: 0 auto 40px;">
+                        <p>Sed mattis. Pellentesque fringilla fringilla condimentum, pulvinar interdum. Suspendisse semper orci, aliquam erat. Proin dui quis neque nibh justo, eget enim.
+                            Sed eu nisl. Vestibulum non sem. Quisque sit amet metus a diam. Fusce nonummy condimentum justo ac massa. Nunc arcu nec felis.</p>
+                    </div>
+                    <div class="footer_copy">
+                        <div class="container justify-content-center">
+                            <div class="column one ">
+                                <div class="copyright"> © 2019 Pizza . All Rights Reserved.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-decoration top" style="background-image:url(./img/home_pizza2_decoration2.png);height:6px;width: 100%"></div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
