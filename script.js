@@ -7,7 +7,7 @@ function toData(){
 
     for (let i=0; i < cbx.length; i++) {
         if ((cbx[i].type === "checkbox" || cbx[i].type === "radio" ) ) {
-            var span = document.querySelector('#'+cbx[i].id+' ~ span');
+            var span = document.querySelector('#'+cbx[i].id+' ~ span:last-child');
             if (!span){
                 span= document.querySelector('#'+cbx[i].id+' + label span');
             }

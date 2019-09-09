@@ -513,15 +513,23 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
     margin-top: 3%;
     margin-left: 75%;
 }
-.ord{
+.ord {
     height: 25%;
     align-content: center;
     font-size: 26px;
     color: #b6997b;
     padding-top: 20px;
     padding-bottom: 15px;
-
 }
+#name_order,#tel_order, #str_order{
+    color: fuchsia;
+    font-size: 30px;
+    border-bottom: 1px dashed gray;
+}
+
+
+
+
 .ord_right {
     background-color: goldenrod;
     height: 350px;
@@ -529,17 +537,23 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
     padding: 25px;
 }
 .ord_p{
-    margin-top: 5px;
+    margin-top: 25px;
     font-size: 26px;
 }
 #sum{
-    font-size: 28px;
     color:rgba(20,26,42,0.8);
-    width: 300px;
     height: 50px;
     font-weight: bold;
+    font-size: 30px;
+    border-bottom: 1px dashed gray;
+    color: #3b26af;
 }
-
+#ingrid{
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    margin-top: 50px;
+    width: 80%;
+}
 
 
 
